@@ -46,6 +46,7 @@ exports.handler = async (event) => {
           "Date Received": { date: { start: new Date().toISOString().split("T")[0] } },
           "Lead Status": { select: { name: "New" } },
           Priority: { select: { name: "Medium" } },
+          "Subscribed to List": { checkbox: mailingList ? true : false },
         },
       }),
     });
@@ -91,3 +92,4 @@ exports.handler = async (event) => {
     };
   }
 };
+ 
