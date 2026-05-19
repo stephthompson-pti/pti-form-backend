@@ -71,7 +71,7 @@ exports.handler = async (event) => {
       },
       body: JSON.stringify({
         email: email,
-        fields: { name: name, company: company || "" },
+        fields: { name: name, company: company || "", looking_for: lookingFor || "", message: message || "" },
         groups: groups,
       }),
     });
